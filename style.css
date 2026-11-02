@@ -1,0 +1,132 @@
+/* 기본 초기화 및 폰트 설정 */
+@import url('https://googleapis.com');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    background-color: #f8f9fa;
+    color: #333333;
+    line-height: 1.6;
+}
+
+/* 전체 콘텐트 레이아웃 */
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 50px 20px;
+}
+
+/* 헤더 스타일 */
+.header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.header h1 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 10px;
+}
+
+.header p {
+    color: #666666;
+    font-size: 1rem;
+}
+
+/* 대분류 내비게이션 탭 */
+.tab-container {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 16px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    border: 1px solid #eaeaea;
+    margin-bottom: 40px;
+    flex-wrap: wrap; /* 모바일 대응 */
+}
+
+.tab-btn {
+    border: none;
+    outline: none;
+    background: none;
+    padding: 10px 20px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #555555;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.tab-btn:hover {
+    background-color: #f1f3f5;
+    color: #1a1a1a;
+}
+
+/* 탭 활성화 상태 (전체보기 디폴트 포인트 컬러) */
+.tab-btn.active {
+    background-color: #f59e0b; /* 따뜻한 푸드 오렌지/옐로우 계열 */
+    color: #ffffff;
+    font-weight: 700;
+    box-shadow: 0 4px 12px rgba(245, 158, 11, 0.2);
+}
+
+/* 브랜드 그리드 레이아웃 */
+.brand-grid {
+    display: grid;
+    grid-template-cols: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+/* 개별 브랜드 카드 아이템 */
+.brand-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    padding: 30px 20px;
+    border-radius: 20px;
+    text-decoration: none; /* 링크 밑줄 제거 */
+    border: 1px solid #eaeaea;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* 카드에 마우스 올렸을 때 애니메이션 효과 */
+.brand-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+    border-color: #d1d5db;
+}
+
+/* 카드 내부 요소 스타일 */
+.brand-card .icon {
+    font-size: 2.2rem;
+    margin-bottom: 12px;
+    transition: transform 0.3s ease;
+}
+
+.brand-card:hover .icon {
+    transform: scale(1.15); /* 마우스 올리면 이모지가 톡 튀어 나옴 */
+}
+
+.brand-card .name {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #2d3748;
+}
+
+.brand-card .desc {
+    font-size: 0.75rem;
+    color: #a0aec0;
+    margin-top: 6px;
+}
